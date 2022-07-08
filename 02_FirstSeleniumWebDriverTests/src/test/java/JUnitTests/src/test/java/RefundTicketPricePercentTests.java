@@ -1,7 +1,7 @@
 import org.junit.Assert;
 import org.junit.Test;
 
-public class RefundTicketPricePercent {
+public class RefundTicketPricePercentTests {
 
     private Integer getRefundTicketPricePercent(Integer hoursBeforeConcert, Boolean wasConcertCancelled,
                                                 Boolean wasConcertRescheduled) {

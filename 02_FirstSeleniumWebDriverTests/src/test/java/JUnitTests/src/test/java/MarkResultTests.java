@@ -1,7 +1,7 @@
 import org.junit.Assert;
 import org.junit.Test;
 
-public class MarkResultTest {
+public class MarkResultTests {
 
     private String getMarkResult(Integer mark) {
 

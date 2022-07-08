@@ -1,7 +1,7 @@
 import org.junit.Assert;
 import org.junit.Test;
 
-public class ImtTest {
+public class ImtTests {
 
     private String getIMTResult(Float heightCm, Float weightKg) {
 
