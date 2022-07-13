@@ -5,16 +5,17 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class OnlineMovieTests {
 
-    private WebDriver driver;
+    private static WebDriver driver;
 
-    @Before
-    public void setUp() {
-        System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
+    @BeforeClass
+    public static void setUp() {
+        System.setProperty("webdriver.chrome.driver", "drivers\\chromedriver.exe");
         driver = new ChromeDriver();
+        driver.navigate().to("https://lm.skillbox.cc/qa_tester/module07/practice3/");
     }
 
-    @After
-    public void tearDown() {
+    @AfterClass
+    public static void tearDown() {
         driver.quit();
     }
 
