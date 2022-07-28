@@ -1,37 +1,22 @@
-import org.junit.*;
+import org.junit.AfterClass;
+import org.junit.Assert;
+import org.junit.BeforeClass;
+import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
 import java.util.concurrent.TimeUnit;
 
-/* Задание 1 */
-
-// a. "section.header p"
-// b. "div.text > a"
-// c. "section > div.text:nth-of-type(2) > a"
-
-/* Задание 2 */
-
-//Найдите тег input, у которого нет атрибута id.
-// By cssLocator = By.cssSelector("input:not([id])");
-
-//Найдите все теги p, у которых одновременно выполняются два условия:
-//class начинается на слово form;
-//class НЕ заканчивается на слово error.
-// By cssLocator2 = By.cssSelector("p:not([class$='error'])[class^='form']");
-
-//Найдите <div class="form-inner">, у него найдите первый по счёту элемент такого типа: <p class="form-row">.
-// By cssLocator3 = By.cssSelector("div.form-inner > form.form > p.form-row:first-child");
-
-public class MyHomeworkTests {
-
+public class WaitElemsTests {
     private static WebDriver driver;
     private static WebDriverWait wait;
 
     @BeforeClass
-    public static void setUp() {
+    public static void setUp()
+    {
         System.setProperty("webdriver.chrome.driver", "drivers\\chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
@@ -41,12 +26,13 @@ public class MyHomeworkTests {
     }
 
     @AfterClass
-    public static void tearDown() {
+    public static void tearDown()
+    {
         driver.quit();
     }
 
     @Test
-    public void test1() {
+    public void test1() throws InterruptedException {
         By articleLocator = By.cssSelector("button.articlePreview__link");
         By titleArticlePreviewLocator = By.cssSelector("div.vb-content > div:nth-child(1) > div.articlePreview__content > p.articlePreview__title");
         By textArticlePreviewLocator = By.cssSelector("div.vb-content > div:nth-child(1) > div.articlePreview__content > p.articlePreview__text");
