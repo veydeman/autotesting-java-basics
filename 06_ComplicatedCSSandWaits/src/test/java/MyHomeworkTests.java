@@ -14,16 +14,16 @@ import java.util.concurrent.TimeUnit;
 
 /* Задание 2 */
 
-//Найдите тег input, у которого нет атрибута id.
-// By cssLocator = By.cssSelector("input:not([id])");
+// Найдите тег input, у которого нет атрибута id.
+// "input:not([id])"
 
-//Найдите все теги p, у которых одновременно выполняются два условия:
-//class начинается на слово form;
-//class НЕ заканчивается на слово error.
-// By cssLocator2 = By.cssSelector("p:not([class$='error'])[class^='form']");
+// Найдите все теги p, у которых одновременно выполняются два условия:
+// class начинается на слово form;
+// class НЕ заканчивается на слово error.
+// "p:not([class$='error'])[class^='form']"
 
-//Найдите <div class="form-inner">, у него найдите первый по счёту элемент такого типа: <p class="form-row">.
-// By cssLocator3 = By.cssSelector("div.form-inner > form.form > p.form-row:first-child");
+// Найдите <div class="form-inner">, у него найдите первый по счёту элемент такого типа: <p class="form-row">.
+// "p.form-row:first-child"
 
 public class MyHomeworkTests {
 
