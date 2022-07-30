@@ -8,9 +8,9 @@ import java.util.concurrent.TimeUnit;
 
 /* Задание 1 */
 
-// a. "section.header p"
+// a. "p"
 // b. "div.text > a"
-// c. "section > div.text:nth-of-type(2) > a"
+// c. "div.text:nth-of-type(2) > a"
 
 /* Задание 2 */
 
